@@ -1,293 +1,293 @@
-hera
+hera4
 ============
 
 Submodules
 ----------
 
-hera.affinity module
+hera4.affinity module
 --------------------
 
-.. automodule:: hera.affinity
+.. automodule:: hera4.affinity
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.archive module
+hera4.archive module
 -------------------
 
-.. automodule:: hera.archive
+.. automodule:: hera4.archive
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.artifact module
+hera4.artifact module
 --------------------
 
-.. automodule:: hera.artifact
+.. automodule:: hera4.artifact
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.backoff module
+hera4.backoff module
 -------------------
 
-.. automodule:: hera.backoff
+.. automodule:: hera4.backoff
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.client module
+hera4.client module
 ------------------
 
-.. automodule:: hera.client
+.. automodule:: hera4.client
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.config module
+hera4.config module
 ------------------
 
-.. automodule:: hera.config
+.. automodule:: hera4.config
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.cron\_workflow module
+hera4.cron\_workflow module
 --------------------------
 
-.. automodule:: hera.cron_workflow
+.. automodule:: hera4.cron_workflow
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.dag module
+hera4.dag module
 ---------------
 
-.. automodule:: hera.dag
+.. automodule:: hera4.dag
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.env module
+hera4.env module
 ---------------
 
-.. automodule:: hera.env
+.. automodule:: hera4.env
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.env\_from module
+hera4.env\_from module
 ---------------------
 
-.. automodule:: hera.env_from
+.. automodule:: hera4.env_from
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.host\_alias module
+hera4.host\_alias module
 -----------------------
 
-.. automodule:: hera.host_alias
+.. automodule:: hera4.host_alias
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.host\_config module
+hera4.host\_config module
 ------------------------
 
-.. automodule:: hera.host_config
+.. automodule:: hera4.host_config
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.image module
+hera4.image module
 -----------------
 
-.. automodule:: hera.image
+.. automodule:: hera4.image
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.io module
+hera4.io module
 --------------
 
-.. automodule:: hera.io
+.. automodule:: hera4.io
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.memoize module
+hera4.memoize module
 -------------------
 
-.. automodule:: hera.memoize
+.. automodule:: hera4.memoize
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.metric module
+hera4.metric module
 ------------------
 
-.. automodule:: hera.metric
+.. automodule:: hera4.metric
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.operator module
+hera4.operator module
 --------------------
 
-.. automodule:: hera.operator
+.. automodule:: hera4.operator
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.parameter module
+hera4.parameter module
 ---------------------
 
-.. automodule:: hera.parameter
+.. automodule:: hera4.parameter
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.resource\_template module
+hera4.resource\_template module
 ------------------------------
 
-.. automodule:: hera.resource_template
+.. automodule:: hera4.resource_template
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.resources module
+hera4.resources module
 ---------------------
 
-.. automodule:: hera.resources
+.. automodule:: hera4.resources
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.retry\_policy module
+hera4.retry\_policy module
 -------------------------
 
-.. automodule:: hera.retry_policy
+.. automodule:: hera4.retry_policy
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.retry\_strategy module
+hera4.retry\_strategy module
 ---------------------------
 
-.. automodule:: hera.retry_strategy
+.. automodule:: hera4.retry_strategy
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.security\_context module
+hera4.security\_context module
 -----------------------------
 
-.. automodule:: hera.security_context
+.. automodule:: hera4.security_context
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.sequence module
+hera4.sequence module
 --------------------
 
-.. automodule:: hera.sequence
+.. automodule:: hera4.sequence
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.task module
+hera4.task module
 ----------------
 
-.. automodule:: hera.task
+.. automodule:: hera4.task
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.template\_ref module
+hera4.template\_ref module
 -------------------------
 
-.. automodule:: hera.template_ref
+.. automodule:: hera4.template_ref
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.toleration module
+hera4.toleration module
 ----------------------
 
-.. automodule:: hera.toleration
+.. automodule:: hera4.toleration
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.ttl\_strategy module
+hera4.ttl\_strategy module
 -------------------------
 
-.. automodule:: hera.ttl_strategy
+.. automodule:: hera4.ttl_strategy
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.validators module
+hera4.validators module
 ----------------------
 
-.. automodule:: hera.validators
+.. automodule:: hera4.validators
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.value\_from module
+hera4.value\_from module
 -----------------------
 
-.. automodule:: hera.value_from
+.. automodule:: hera4.value_from
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.volume\_claim\_gc module
+hera4.volume\_claim\_gc module
 -----------------------------
 
-.. automodule:: hera.volume_claim_gc
+.. automodule:: hera4.volume_claim_gc
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.volumes module
+hera4.volumes module
 -------------------
 
-.. automodule:: hera.volumes
+.. automodule:: hera4.volumes
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.workflow module
+hera4.workflow module
 --------------------
 
-.. automodule:: hera.workflow
+.. automodule:: hera4.workflow
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.workflow\_service module
+hera4.workflow\_service module
 -----------------------------
 
-.. automodule:: hera.workflow_service
+.. automodule:: hera4.workflow_service
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.workflow\_status module
+hera4.workflow\_status module
 ----------------------------
 
-.. automodule:: hera.workflow_status
+.. automodule:: hera4.workflow_status
    :members:
    :undoc-members:
    :show-inheritance:
 
-hera.workflow\_template module
+hera4.workflow\_template module
 ------------------------------
 
-.. automodule:: hera.workflow_template
+.. automodule:: hera4.workflow_template
    :members:
    :undoc-members:
    :show-inheritance:
@@ -295,7 +295,7 @@ hera.workflow\_template module
 Module contents
 ---------------
 
-.. automodule:: hera
+.. automodule:: hera4
    :members:
    :undoc-members:
    :show-inheritance:

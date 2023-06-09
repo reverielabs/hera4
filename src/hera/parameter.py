@@ -7,7 +7,7 @@ from argo_workflows.models import (
     IoArgoprojWorkflowV1alpha1ValueFrom,
 )
 
-from hera.value_from import ValueFrom
+from hera4.value_from import ValueFrom
 
 MISSING = object()
 
@@ -36,7 +36,7 @@ class Parameter:
     default: Optional[str] = None
         Default value of the parameter in case the `value` cannot be obtained based on the specification.
     value_from: Optional[ValueFrom] = None
-        Describes a location in which to obtain the value to a parameter. See `hera.value_from.ValueFrom` or
+        Describes a location in which to obtain the value to a parameter. See `hera4.value_from.ValueFrom` or
         https://argoproj.github.io/argo-workflows/fields/#valuefrom.
     description: Optional[str] = None
         An optional parameter description.

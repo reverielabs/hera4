@@ -4,7 +4,7 @@ The first task, t1, creates a file located at `/file` containing a message. The 
 task, t2, takes this artifact, places it at its own `/file` path, and print out the content.
 """
 
-from hera import Artifact, Task, Workflow
+from hera4 import Artifact, Task, Workflow
 
 
 def writer():
@@ -17,7 +17,7 @@ def consumer():
         print(f.readlines())  # prints `Hello, world!` to `stdout`
 
 
-# assumes you used `hera.set_global_token` and `hera.set_global_host` so that the workflow can be submitted
+# assumes you used `hera4.set_global_token` and `hera4.set_global_host` so that the workflow can be submitted
 with Workflow("artifact") as w:
     w_t = Task("writer", writer, outputs=[Artifact("test", "/file")])
     c_t = Task(

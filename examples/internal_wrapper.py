@@ -5,7 +5,7 @@ top of Hera to support consistency in submission across users, teams, etc.
 
 from typing import Any, Callable, List, Optional, Union
 
-from hera import (
+from hera4 import (
     ExistingVolume,
     Resources,
     RetryStrategy,
@@ -20,7 +20,7 @@ def generate_token() -> str:
     """
     Abstractly, generates a client Bearer token that passes auth with the Argo server for workflow submission.
 
-    Alternatively, you can use `hera.set_global_token(callable_to_generate_token)` for setting a global token!
+    Alternatively, you can use `hera4.set_global_token(callable_to_generate_token)` for setting a global token!
     """
     return "my-bearer-token"
 

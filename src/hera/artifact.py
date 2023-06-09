@@ -10,7 +10,7 @@ from argo_workflows.models import (
     SecretKeySelector,
 )
 
-from hera.archive import Archive
+from hera4.archive import Archive
 
 
 class Artifact:
@@ -119,7 +119,7 @@ class BucketArtifact(Artifact):
 
 
 class S3Artifact(BucketArtifact):
-    """S3 artifact specification. See `hera.artifact.BucketArtifact`"""
+    """S3 artifact specification. See `hera4.artifact.BucketArtifact`"""
 
     def as_argument(self) -> IoArgoprojWorkflowV1alpha1Artifact:
         """Assembles the artifact representation for use as an argument to a task"""
@@ -142,7 +142,7 @@ class S3Artifact(BucketArtifact):
 
 
 class GCSArtifact(BucketArtifact):
-    """GCS artifact specification. See `hera.artifact.BucketArtifact`"""
+    """GCS artifact specification. See `hera4.artifact.BucketArtifact`"""
 
     def as_argument(self) -> IoArgoprojWorkflowV1alpha1Artifact:
         """Assembles the artifact representation for use as an argument to a task"""

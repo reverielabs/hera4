@@ -1,5 +1,5 @@
-from hera.action import ExecAction, GRPCAction, HTTPGetAction, TCPSocketAction
-from hera.probe import ArgoProbe, Probe
+from hera4.action import ExecAction, GRPCAction, HTTPGetAction, TCPSocketAction
+from hera4.probe import ArgoProbe, Probe
 
 
 class TestProbe:

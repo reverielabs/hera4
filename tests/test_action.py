@@ -1,6 +1,6 @@
 import pytest
 
-from hera.action import (
+from hera4.action import (
     ArgoExecAction,
     ArgoGRPCAction,
     ArgoHTTPGetAction,

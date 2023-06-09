@@ -75,9 +75,9 @@ class NodeSelectorTerm:
     Parameters
     ----------
     expressions: Optional[List[Expression]] = None
-        A list of expressions for the node selector term to match. See `hera.affinity.NodeSelectorRequirement`.
+        A list of expressions for the node selector term to match. See `hera4.affinity.NodeSelectorRequirement`.
     fields: Optional[List[Field]] = None
-        A list of fields for the node selector term to match. See `hera.affinity.NodeSelectorRequirement`.
+        A list of fields for the node selector term to match. See `hera4.affinity.NodeSelectorRequirement`.
 
     Notes
     -----
@@ -113,7 +113,7 @@ class PreferredSchedulingTerm:
     Parameters
     ----------
     node_selector_term: NodeSelectorTerm
-        The node selector term for node selector assembly. See also `hera.affinity.NodeSelectorTerm`.
+        The node selector term for node selector assembly. See also `hera4.affinity.NodeSelectorTerm`.
     weight: int
         Integer weight for the scheduling term. This is supposed to be between 1 and 100.
 
@@ -180,7 +180,7 @@ class LabelSelector:
     Parameters
     ----------
     label_selector_requirements: Optional[List[LabelSelectorRequirement]] = None
-        A list of label selector requirements. See `hera.affinity.LabelSelectorRequirement`.
+        A list of label selector requirements. See `hera4.affinity.LabelSelectorRequirement`.
     match_labels: Optional[Dict[str, str]] = None
         A list of labels to match, in the form of key value pairs.
 
@@ -222,9 +222,9 @@ class PodAffinityTerm:
     topology_key: str
         The topology key to use for pod affinity.
     label_selector: Optional[LabelSelector] = None
-        The label selector. See also `hera.affinity.LabelSelector`.
+        The label selector. See also `hera4.affinity.LabelSelector`.
     namespace_selector: Optional[LabelSelector] = None
-        The namespace selector as a label selector. See also `hera.affinity.LabelSelector`.
+        The namespace selector as a label selector. See also `hera4.affinity.LabelSelector`.
     namespaces: Optional[List[str]] = None
         Namespace to match pod affinity term in.
 
@@ -269,7 +269,7 @@ class WeightedPodAffinityTerm:
     Parameters
     ----------
     pod_affinity_term: PodAffinityTerm
-        The pod affinity term. See also `hera.affinity.PodAffinityTerm`.
+        The pod affinity term. See also `hera4.affinity.PodAffinityTerm`.
     weight: int
         The weight of the pod affinity term. This should be between 1 and 100.
 
@@ -301,9 +301,9 @@ class PodAffinity:
     Parameters
     ----------
     weighted_pod_affinities: Optional[List[WeightedPodAffinityTerm]] = None
-        Optional list of weighted pod affinity terms. See also `hera.affinity.WeightedPodAffinityTerm`.
+        Optional list of weighted pod affinity terms. See also `hera4.affinity.WeightedPodAffinityTerm`.
     pod_affinity_terms: Optional[List[PodAffinityTerm]] = None
-        Optional list of pod affinity terms. See also `hera.affinity.PodAffinityTerm`.
+        Optional list of pod affinity terms. See also `hera4.affinity.PodAffinityTerm`.
 
     Notes
     -----
@@ -353,9 +353,9 @@ class PodAntiAffinity:
     """Builds the K8S pod anti-affinity.
 
     weighted_pod_affinities: Optional[List[WeightedPodAffinityTerm]] = None
-        Optional list of weighted pod affinity terms. See also `hera.affinity.WeightedPodAffinityTerm`.
+        Optional list of weighted pod affinity terms. See also `hera4.affinity.WeightedPodAffinityTerm`.
     pod_affinity_terms: Optional[List[PodAffinityTerm]] = None
-        Optional list of pod affinity terms. See also `hera.affinity.PodAffinityTerm`.
+        Optional list of pod affinity terms. See also `hera4.affinity.PodAffinityTerm`.
 
     Notes
     -----
@@ -407,7 +407,7 @@ class NodeSelector:
     Parameters
     ----------
     terms: Optional[List[NodeSelectorTerm]] = None
-        The terms to use for node selector assembly. See also `hera.affinity.NodeSelectorTerm`.
+        The terms to use for node selector assembly. See also `hera4.affinity.NodeSelectorTerm`.
 
     Notes
     -----
@@ -432,9 +432,9 @@ class NodeAffinity:
     Parameters
     ----------
     preferred_scheduling_terms: Optional[List[PreferredSchedulingTerm]] = None,
-        Optional list of preferred scheduling terms. See `hera.affinity.PreferredSchedulingTerm`.
+        Optional list of preferred scheduling terms. See `hera4.affinity.PreferredSchedulingTerm`.
     node_selector: Optional[NodeSelector] = None
-        Optional node selector for node affinity. See `hera.affinity.NodeSelector`.
+        Optional node selector for node affinity. See `hera4.affinity.NodeSelector`.
 
     Notes
     -----
@@ -486,11 +486,11 @@ class Affinity:
     Parameters
     ----------
     pod_affinity: Optional[PodAffinity] = None
-        Pod affinity specification. See `hera.affinity.PodAffinity`.
+        Pod affinity specification. See `hera4.affinity.PodAffinity`.
     pod_anti_affinity: Optional[PodAntiAffinity] = None
-        Pod anti affinity specification. See `hera.affinity.PodAntiAffinity`.
+        Pod anti affinity specification. See `hera4.affinity.PodAntiAffinity`.
     node_affinity: Optional[NodeAffinity] = None
-        Node affinity. See `hera.affinity.NodeAffinity`.
+        Node affinity. See `hera4.affinity.NodeAffinity`.
 
     Notes
     -----

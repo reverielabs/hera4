@@ -30,7 +30,7 @@ Once the pull-request is merged, based on the type label on the merged pull-requ
 
 ## Publishing a new version
 
-Once the maintainers are ready to publish a new version, they can go to the Github draft release at https://github.com/argoproj-labs/hera-workflows/releases.
+Once the maintainers are ready to publish a new version, they can go to the Github draft release at https://github.com/argoproj-labs/hera4-workflows/releases.
 
 They will find a draft release with the appropriate version and changelog that is only visible to maintainers on the repository.
 
@@ -42,4 +42,4 @@ Once ready, they can click "Publish release".
 
 <img width="492" alt="image" src="https://user-images.githubusercontent.com/16130816/206037939-72fde009-b5e1-41ed-8f6a-8da7557ca08a.png">
 
-This will create a new git tag and release on the repository and kick off a Github action that will automatically publish the current contents on the hera repository to PyPI with the release version.
+This will create a new git tag and release on the repository and kick off a Github action that will automatically publish the current contents on the hera4 repository to PyPI with the release version.

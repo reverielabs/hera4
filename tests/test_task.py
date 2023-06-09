@@ -14,7 +14,7 @@ from argo_workflows.models import (
 )
 from argo_workflows.models import Toleration as _ArgoToleration
 
-from hera import (
+from hera4 import (
     DAG,
     Artifact,
     Backoff,

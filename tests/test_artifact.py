@@ -9,7 +9,7 @@ from argo_workflows.models import (
     SecretKeySelector,
 )
 
-from hera import (
+from hera4 import (
     Archive,
     Artifact,
     GCSArtifact,

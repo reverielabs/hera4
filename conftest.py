@@ -2,8 +2,8 @@ from typing import Dict, List, Optional, Tuple
 
 import pytest
 
-from hera import set_global_host, set_global_token
-from hera.affinity import (
+from hera4 import set_global_host, set_global_token
+from hera4.affinity import (
     Affinity,
     Expression,
     Field,
@@ -19,11 +19,11 @@ from hera.affinity import (
     PreferredSchedulingTerm,
     WeightedPodAffinityTerm,
 )
-from hera.artifact import Artifact
-from hera.cron_workflow import CronWorkflow
-from hera.global_config import GlobalConfig
-from hera.workflow import Workflow
-from hera.workflow_template import WorkflowTemplate
+from hera4.artifact import Artifact
+from hera4.cron_workflow import CronWorkflow
+from hera4.global_config import GlobalConfig
+from hera4.workflow import Workflow
+from hera4.workflow_template import WorkflowTemplate
 
 
 @pytest.fixture

@@ -1,6 +1,6 @@
-from hera.global_config import _GlobalConfig
-from hera.task import Task
-from hera.workflow import Workflow
+from hera4.global_config import _GlobalConfig
+from hera4.task import Task
+from hera4.workflow import Workflow
 
 
 class TestGlobalConfig:

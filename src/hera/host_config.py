@@ -4,7 +4,7 @@ import warnings
 from collections.abc import Callable
 from typing import Optional, Union
 
-from hera.global_config import GlobalConfig
+from hera4.global_config import GlobalConfig
 
 
 def set_global_api_version(v: str) -> None:

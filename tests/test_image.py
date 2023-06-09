@@ -1,4 +1,4 @@
-from hera import ImagePullPolicy
+from hera4 import ImagePullPolicy
 
 
 class TestImagePullPolicy:

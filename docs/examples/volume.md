@@ -3,7 +3,7 @@
 This example showcases how clients can schedule tasks that provision independent volumes
 
 ```python
-from hera import Task, Volume, Workflow
+from hera4 import Task, Volume, Workflow
 
 
 def do():
@@ -23,7 +23,7 @@ def do():
     print(f'This is a task that requires a lot of storage! Available storage:\n{os.popen("df -h").read()}')
 
 
-# assumes you used `hera.set_global_token` and `hera.set_global_host` so that the workflow can be submitted
+# assumes you used `hera4.set_global_token` and `hera4.set_global_host` so that the workflow can be submitted
 with Workflow(
     "volume",
 ) as w:

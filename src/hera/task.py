@@ -22,31 +22,31 @@ from argo_workflows.models import Toleration as ArgoToleration
 from argo_workflows.models import Volume as ArgoVolume
 from argo_workflows.models import VolumeMount
 
-import hera
-from hera.affinity import Affinity
-from hera.artifact import Artifact
-from hera.dag import DAG
-from hera.env import Env
-from hera.env_from import BaseEnvFrom
-from hera.global_config import GlobalConfig
-from hera.image import ImagePullPolicy
-from hera.io import IO
-from hera.memoize import Memoize
-from hera.metric import Metric, Metrics
-from hera.operator import Operator
-from hera.parameter import Parameter, MISSING
-from hera.port import ContainerPort
-from hera.resource_template import ResourceTemplate
-from hera.resources import Resources
-from hera.retry_strategy import RetryStrategy
-from hera.security_context import TaskSecurityContext
-from hera.sequence import Sequence
-from hera.sidecar import Sidecar
-from hera.suspend import Suspend
-from hera.template_ref import TemplateRef
-from hera.toleration import Toleration
-from hera.validators import validate_name
-from hera.volumes import (
+import hera4
+from hera4.affinity import Affinity
+from hera4.artifact import Artifact
+from hera4.dag import DAG
+from hera4.env import Env
+from hera4.env_from import BaseEnvFrom
+from hera4.global_config import GlobalConfig
+from hera4.image import ImagePullPolicy
+from hera4.io import IO
+from hera4.memoize import Memoize
+from hera4.metric import Metric, Metrics
+from hera4.operator import Operator
+from hera4.parameter import Parameter, MISSING
+from hera4.port import ContainerPort
+from hera4.resource_template import ResourceTemplate
+from hera4.resources import Resources
+from hera4.retry_strategy import RetryStrategy
+from hera4.security_context import TaskSecurityContext
+from hera4.sequence import Sequence
+from hera4.sidecar import Sidecar
+from hera4.suspend import Suspend
+from hera4.template_ref import TemplateRef
+from hera4.toleration import Toleration
+from hera4.validators import validate_name
+from hera4.volumes import (
     ConfigMapVolume,
     EmptyDirVolume,
     ExistingVolume,
@@ -54,7 +54,7 @@ from hera.volumes import (
     Volume,
     _BaseVolume,
 )
-from hera.workflow_status import WorkflowStatus
+from hera4.workflow_status import WorkflowStatus
 
 
 class TaskResult(str, Enum):
@@ -91,7 +91,7 @@ class Task(IO):
         lists (each list contains a series of values to pass to the function), the task will execute as a task
         group and schedule multiple function calls in parallel.
     with_sequence: Optional[Sequence] = None
-        Sequence is similar to `with_param` in that it generates a range of objects. See `hera.sequence.Sequence` or
+        Sequence is similar to `with_param` in that it generates a range of objects. See `hera4.sequence.Sequence` or
         https://argoproj.github.io/argo-workflows/fields/#sequence.
     inputs: Optional[
             Union[
@@ -129,13 +129,13 @@ class Task(IO):
         The environment specifications to load. This operates on a single Enum that specifies whether to load the AWS
         credentials, or other available secrets.
     resources: Optional[Resources] = None
-        A task resources configuration. See `hera.resources.Resources`.
+        A task resources configuration. See `hera4.resources.Resources`.
     volumes: Optional[List[BaseVolume]] = None
-        Any volumes to mount or create for the task. See `hera.volumes`.
+        Any volumes to mount or create for the task. See `hera4.volumes`.
     working_dir: Optional[str] = None
         The working directory to be set inside the executing container context.
     retry: Optional[RetryStrategy] = None
-        A task retry strategy configuration. See `hera.retry_strategy.RetryStrategy`.
+        A task retry strategy configuration. See `hera4.retry_strategy.RetryStrategy`.
     tolerations: Optional[List[Toleration]] = None
         List of tolerations for the pod executing the task. This is used for scheduling purposes.
     node_selectors: Optional[Dict[str, str]] = None
@@ -291,8 +291,8 @@ class Task(IO):
 
         self.inputs += self._deduce_input_params()
 
-        if hera.dag_context.is_set():
-            hera.dag_context.add_task(self)
+        if hera4.dag_context.is_set():
+            hera4.dag_context.add_task(self)
 
         for hook in GlobalConfig.task_post_init_hooks:
             hook(self)
@@ -492,7 +492,7 @@ class Task(IO):
             # templates by instantiating a task within the current context.
             # The name will never be used; it's only present because the
             # field is mandatory.
-            t = Task("temp-name-for-hera-exit-dag", dag=other)
+            t = Task("temp-name-for-hera4-exit-dag", dag=other)
             t.is_exit_task = True
             self.exit_task = other.name
         else:
@@ -1064,7 +1064,7 @@ class Task(IO):
         Notes
         -----
         If the task includes a GPU resource specification the client is responsible for specifying a GPU toleration.
-        For GKE and Azure workloads `hera.toleration.GPUToleration` can be specified.
+        For GKE and Azure workloads `hera4.toleration.GPUToleration` can be specified.
         """
         if self.tolerations is None:
             return []

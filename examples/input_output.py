@@ -1,4 +1,4 @@
-from hera import Parameter, Task, ValueFrom, Workflow
+from hera4 import Parameter, Task, ValueFrom, Workflow
 
 
 def produce():
@@ -10,7 +10,7 @@ def consume(msg: str):
     print(f"Message was: {msg}")
 
 
-# assumes you used `hera.set_global_token` and `hera.set_global_host` so that the workflow can be submitted
+# assumes you used `hera4.set_global_token` and `hera4.set_global_host` so that the workflow can be submitted
 with Workflow("io") as w:
     t1 = Task("p", produce, outputs=[Parameter("msg", value_from=ValueFrom(path="/test.txt"))])
     t2 = Task("c", consume, inputs=[t1.get_parameter("msg")])

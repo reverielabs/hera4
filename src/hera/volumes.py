@@ -17,7 +17,7 @@ from argo_workflows.models import Volume as ArgoVolume
 from argo_workflows.models import VolumeDevice as ArgoVolumeDevice
 from argo_workflows.models import VolumeMount as ArgoVolumeMount
 
-from hera.validators import validate_storage_units
+from hera4.validators import validate_storage_units
 
 
 @dataclass
@@ -291,7 +291,7 @@ class Volume(_BaseVolume, _BaseVolumeKeyword, _Sized, _BaseVolumePositional):
     Raises
     ------
     ValueError or AssertionError upon failure to validate the units of the size. See
-    `hera.v1.validators.validate_storage_units`.
+    `hera4.v1.validators.validate_storage_units`.
 
     Notes
     -----

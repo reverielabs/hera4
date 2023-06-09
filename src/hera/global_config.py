@@ -6,8 +6,8 @@ from typing import TYPE_CHECKING, Optional, Tuple, Union
 from typing_extensions import Protocol
 
 if TYPE_CHECKING:
-    from hera.task import Task
-    from hera.workflow import Workflow
+    from hera4.task import Task
+    from hera4.workflow import Workflow
 
 
 # usage of `pragma: no cover` since coverage will complain that protocols are not tested. These are indeed tested
@@ -32,7 +32,7 @@ class _GlobalConfig:
     Notes
     -----
     This should not be instantiated directly by the user. There is an instance of the `_GlobalConfig` in this module,
-    which is what should be used. Access as either `hera.GlobalConfig` or `hera.global_config.GlobalConfig/Config`.
+    which is what should be used. Access as either `hera4.GlobalConfig` or `hera4.global_config.GlobalConfig/Config`.
     """
 
     # protected attributes are ones that are computed/go through some light processing upon setting or

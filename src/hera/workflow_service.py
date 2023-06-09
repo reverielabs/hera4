@@ -23,10 +23,10 @@ from argo_workflows.models import (
     IoArgoprojWorkflowV1alpha1WorkflowTemplateUpdateRequest,
 )
 
-from hera.client import Client
-from hera.config import Config
-from hera.global_config import GlobalConfig
-from hera.workflow_status import WorkflowStatus
+from hera4.client import Client
+from hera4.config import Config
+from hera4.global_config import GlobalConfig
+from hera4.workflow_status import WorkflowStatus
 
 
 class WorkflowService:
@@ -36,14 +36,14 @@ class WorkflowService:
     ----------
     host: Optional[str] = None
         The host of the Argo server to submit workflows to. An attempt to assemble a host from the globally set host
-        (`hera.set_global_host`) is performed, followed by an attempt to get a host from Argo K8S cluster
+        (`hera4.set_global_host`) is performed, followed by an attempt to get a host from Argo K8S cluster
         environment variables if this is not specified.
     verify_ssl: Optional[bool] = GlobalConfig.verify_ssl
         Whether to perform SSL/TLS verification. See `GlobalConfig.verify_ssl`.
     token: Optional[str] = None
         The token to use for authentication purposes. Note that this assumes the Argo deployment is fronted with a
         deployment/service that can intercept a request and check the Bearer token. An attempt is performed to get the
-        token from the global context (`hera.set_global_token`).
+        token from the global context (`hera4.set_global_token`).
     namespace: Optional[str] = None
         The K8S namespace the workflow service creates workflows in. This defaults to the `default` namespace if a
         namespace is not passed or a global namespace is not set.

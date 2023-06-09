@@ -1,5 +1,5 @@
 """This example showcases how one can schedule a workflow with a parallel DAG task through Hera"""
-from hera import DAG, Parameter, Task, Workflow
+from hera4 import DAG, Parameter, Task, Workflow
 
 
 def produce(instruction: str):
@@ -15,7 +15,7 @@ def gather(products: str):
     print(products)
 
 
-# assumes you used `hera.set_global_token` and `hera.set_global_host` so that the workflow can be submitted
+# assumes you used `hera4.set_global_token` and `hera4.set_global_host` so that the workflow can be submitted
 with Workflow("parallel-dag") as wf:
     with DAG("pipeline", inputs=[Parameter("instruction")], outputs=[Parameter("instruction")]) as pipeline:
         t1 = Task("create", produce, inputs=[pipeline.get_parameter("instruction")])

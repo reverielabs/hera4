@@ -3,12 +3,12 @@
 This example showcases how clients can use Hera to dynamically generate tasks that process outputs from one task in
 parallel. Differ from dynamic_fanout.py, this example uses a container to generate the tasks and the dynamically
 created tasks are also container only.
-More details can be found here: https://github.com/argoproj-labs/hera-workflows/issues/250
+More details can be found here: https://github.com/argoproj-labs/hera4-workflows/issues/250
 
 ```python
-from hera import Parameter, Task, Workflow
+from hera4 import Parameter, Task, Workflow
 
-# assumes you used `hera.set_global_token` and `hera.set_global_host` so that the workflow can be submitted
+# assumes you used `hera4.set_global_token` and `hera4.set_global_host` so that the workflow can be submitted
 with Workflow("dynamic-fanout-container") as w:
     # this can be anything! e.g. fetch from some API, then in parallel process all entities; chunk database records
     # and process them in parallel, etc.

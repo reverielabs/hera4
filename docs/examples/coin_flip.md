@@ -3,7 +3,7 @@
 This example showcases the classic conditional workflow coin-flip.
 
 ```python
-from hera import Task, Workflow
+from hera4 import Task, Workflow
 
 
 def random_code():
@@ -21,7 +21,7 @@ def tails():
     print("it was tails")
 
 
-# assumes you used `hera.set_global_token` and `hera.set_global_host` so that the workflow can be submitted
+# assumes you used `hera4.set_global_token` and `hera4.set_global_host` so that the workflow can be submitted
 with Workflow("coin-flip") as w:
     r = Task("r", random_code)
     h = Task("h", heads)

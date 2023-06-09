@@ -1,8 +1,8 @@
 import threading
 from typing import List
 
-from hera.dag import DAG
-from hera.task import Task
+from hera4.dag import DAG
+from hera4.task import Task
 
 
 class _DAG_context(threading.local):

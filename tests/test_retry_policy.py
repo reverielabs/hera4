@@ -1,4 +1,4 @@
-from hera.retry_policy import RetryPolicy
+from hera4.retry_policy import RetryPolicy
 
 
 class TestRetryPolicy:

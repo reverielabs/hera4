@@ -3,14 +3,14 @@ from typing import Tuple
 
 from argo_workflows.models import IoArgoprojWorkflowV1alpha1WorkflowTemplate
 
-from hera.global_config import GlobalConfig
-from hera.workflow import Workflow
+from hera4.global_config import GlobalConfig
+from hera4.workflow import Workflow
 
 
 class WorkflowTemplate(Workflow):
     """A workflow template representation.
 
-    See `hera.workflow.Workflow` for parameterization.
+    See `hera4.workflow.Workflow` for parameterization.
 
     Notes
     -----

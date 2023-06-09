@@ -12,24 +12,24 @@ from argo_workflows.models import (
     PodSecurityContext,
 )
 
-from hera.dag import DAG
-from hera.host_alias import HostAlias
-from hera.host_config import set_global_service_account_name
-from hera.metric import Metric, Metrics
-from hera.parameter import Parameter
-from hera.task import Task
-from hera.template_ref import TemplateRef
-from hera.toleration import GPUToleration
-from hera.ttl_strategy import TTLStrategy
-from hera.volume_claim_gc import VolumeClaimGCStrategy
-from hera.volumes import (
+from hera4.dag import DAG
+from hera4.host_alias import HostAlias
+from hera4.host_config import set_global_service_account_name
+from hera4.metric import Metric, Metrics
+from hera4.parameter import Parameter
+from hera4.task import Task
+from hera4.template_ref import TemplateRef
+from hera4.toleration import GPUToleration
+from hera4.ttl_strategy import TTLStrategy
+from hera4.volume_claim_gc import VolumeClaimGCStrategy
+from hera4.volumes import (
     ConfigMapVolume,
     EmptyDirVolume,
     ExistingVolume,
     SecretVolume,
     Volume,
 )
-from hera.workflow import Workflow, WorkflowSecurityContext
+from hera4.workflow import Workflow, WorkflowSecurityContext
 
 
 @pytest.fixture
@@ -406,18 +406,18 @@ class TestWorkflow:
     def test_raises_on_no_yaml_available(self):
         import yaml
 
-        import hera.workflow
+        import hera4.workflow
 
         # TODO: is there a better way to temporarily mock/patch this value to make this test more atomic?
-        hera.workflow._yaml = None
+        hera4.workflow._yaml = None
         with pytest.raises(ImportError) as e:
             Workflow('w').to_yaml()
         assert (
             str(e.value) == "Attempted to use `to_yaml` but PyYAML is not available. "
-            "Install `hera-workflows[yaml]` to install the extra dependency"
+            "Install `hera4-workflows[yaml]` to install the extra dependency"
         )
 
-        hera.workflow._yaml = yaml
+        hera4.workflow._yaml = yaml
 
     @pytest.mark.parametrize(
         ["roundtripper"],
@@ -431,13 +431,13 @@ class TestWorkflow:
         def hello():
             print("Hello, Hera!")
 
-        with Workflow("hello-hera", node_selectors={'a_b_c': 'a_b_c'}, labels={'a_b_c': 'a_b_c'}) as w:
+        with Workflow("hello-hera4", node_selectors={'a_b_c': 'a_b_c'}, labels={'a_b_c': 'a_b_c'}) as w:
             Task("t", hello)
 
         expected = {
-            "metadata": {"name": "hello-hera", "labels": {"a_b_c": "a_b_c"}},
+            "metadata": {"name": "hello-hera4", "labels": {"a_b_c": "a_b_c"}},
             "spec": {
-                "entrypoint": "hello-hera",
+                "entrypoint": "hello-hera4",
                 "templates": [
                     {
                         "name": "t",
@@ -454,7 +454,7 @@ class TestWorkflow:
                             "command": ["python"],
                         },
                     },
-                    {"name": "hello-hera", "dag": {"tasks": [{"name": "t", "template": "t"}]}},
+                    {"name": "hello-hera4", "dag": {"tasks": [{"name": "t", "template": "t"}]}},
                 ],
                 "nodeSelector": {"a_b_c": "a_b_c"},
             },

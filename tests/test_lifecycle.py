@@ -1,5 +1,5 @@
-from hera.action import ExecAction, HTTPGetAction, TCPSocketAction
-from hera.lifecycle import (
+from hera4.action import ExecAction, HTTPGetAction, TCPSocketAction
+from hera4.lifecycle import (
     ArgoLifecycle,
     ArgoLifecycleHandler,
     Lifecycle,

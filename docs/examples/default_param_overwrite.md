@@ -4,7 +4,7 @@ This example showcases how a Python source can be scheduled with default paramet
 conditionally.
 
 ```python
-from hera import Task, Workflow
+from hera4 import Task, Workflow
 
 
 def generator():

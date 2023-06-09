@@ -1,4 +1,4 @@
-from hera import Parameter, Task, ValueFrom, Workflow
+from hera4 import Parameter, Task, ValueFrom, Workflow
 
 
 def generate():
@@ -22,7 +22,7 @@ def fanin(values: list):
     print(f"Received values: {values}!")
 
 
-# assumes you used `hera.set_global_token` and `hera.set_global_host` so that the workflow can be submitted
+# assumes you used `hera4.set_global_token` and `hera4.set_global_host` so that the workflow can be submitted
 with Workflow("dynamic-fanout-fanin") as w:
     generate_task = Task("generate", generate)
     fanout_task = Task(

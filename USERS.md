@@ -7,7 +7,7 @@ Please open a PR with your organization or project name in the following section
 
 ## Organizations/projects using Hera
 
-1. [Dyno Therapeutics](https://www.dynotx.com)
+1. [Dyno Thera4peutics](https://www.dynotx.com)
 2. [Pipekit](https://www.pipekit.io)
 3. [Reverie Labs](https://www.reverielabs.com/)
 4. [Infinite Lambda](https://infinitelambda.com/)

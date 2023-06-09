@@ -13,20 +13,20 @@ from argo_workflows.models import (
     ObjectMeta,
 )
 
-import hera
-from hera.affinity import Affinity
-from hera.dag import DAG
-from hera.global_config import GlobalConfig
-from hera.host_alias import HostAlias
-from hera.metric import Metric, Metrics
-from hera.parameter import Parameter
-from hera.security_context import WorkflowSecurityContext
-from hera.task import Task
-from hera.toleration import Toleration
-from hera.ttl_strategy import TTLStrategy
-from hera.validators import validate_name
-from hera.volume_claim_gc import VolumeClaimGCStrategy
-from hera.workflow_service import WorkflowService
+import hera4
+from hera4.affinity import Affinity
+from hera4.dag import DAG
+from hera4.global_config import GlobalConfig
+from hera4.host_alias import HostAlias
+from hera4.metric import Metric, Metrics
+from hera4.parameter import Parameter
+from hera4.security_context import WorkflowSecurityContext
+from hera4.task import Task
+from hera4.toleration import Toleration
+from hera4.ttl_strategy import TTLStrategy
+from hera4.validators import validate_name
+from hera4.volume_claim_gc import VolumeClaimGCStrategy
+from hera4.workflow_service import WorkflowService
 
 # PyYAML is an optional dependency
 _yaml: Optional[ModuleType] = None
@@ -55,7 +55,7 @@ class Workflow:
     dag_name: Optional[str] = None
         Name of the underlying dag template. This will default to the name of the workflow.
     service: Optional[WorkflowService] = None
-        A workflow service to use for submissions. See `hera.v1.workflow_service.WorkflowService`.
+        A workflow service to use for submissions. See `hera4.v1.workflow_service.WorkflowService`.
     parallelism: Optional[int] = None
         The number of parallel tasks to run in case a task group is executed for multiple tasks.
     service_account_name: Optional[str] = None,
@@ -287,7 +287,7 @@ class Workflow:
         Note that this creates a DAG if one is not specified. This supports using `with Workflow(...)`.
         """
         self.in_context = True
-        hera.dag_context.enter(self.dag)
+        hera4.dag_context.enter(self.dag)
         return self
 
     def __exit__(self: WorkflowType, exc_type, exc_val, exc_tb) -> None:
@@ -296,7 +296,7 @@ class Workflow:
         This supports using `with Workflow(...)`.
         """
         self.in_context = False
-        hera.dag_context.exit()
+        hera4.dag_context.exit()
 
     def add_task(self: WorkflowType, t: Task) -> WorkflowType:
         """Add a task to the workflow"""
@@ -334,7 +334,7 @@ class Workflow:
             # templates by instantiating a task within the current context.
             # The name will never be used; it's only present because the
             # field is mandatory.
-            t = Task("temp-name-for-hera-exit-dag", dag=other)
+            t = Task("temp-name-for-hera4-exit-dag", dag=other)
             t.is_exit_task = True
             self.exit_task = other.name
         else:
@@ -370,6 +370,6 @@ class Workflow:
         if _yaml is None:
             raise ImportError(
                 "Attempted to use `to_yaml` but PyYAML is not available. "
-                "Install `hera-workflows[yaml]` to install the extra dependency"
+                "Install `hera4-workflows[yaml]` to install the extra dependency"
             )
         return _yaml.dump(self.to_dict(), **yaml_kwargs)

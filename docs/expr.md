@@ -6,15 +6,15 @@ Hera provides an easy way to construct `expr` expressions in `Python`. It suppor
 
 ## Usage
 
-The recommended way of using the `hera.expr` module is to construct the expression in Python. Once your expressions is ready to be used,
-you may call `str(<expression>)` to convert it to an appropriate `expr` expression. `hera` also supports formatting expressions such that they are surrounded by braces which is useful in Argo when substituting variables.. You can do this via Python string format literals and by adding `$` as a format string.
+The recommended way of using the `hera4.expr` module is to construct the expression in Python. Once your expressions is ready to be used,
+you may call `str(<expression>)` to convert it to an appropriate `expr` expression. `hera4` also supports formatting expressions such that they are surrounded by braces which is useful in Argo when substituting variables.. You can do this via Python string format literals and by adding `$` as a format string.
 
 Example:
 
-* `f"{g.input.parameters.value:$}" == "{{input.parameters.value}}"`: the `$` format string tells `hera` to insert the braces around the output as a simple variable.
-* `f"{g.workflow.parameters.config.jsonpath('$.a'):=}" == "{{=jsonpath(workflow.parameters.config, '$.a')}}"`: the `=` format string tells `hera` to insert the braces around the output and insert and equals sign and output a complex expression.
+* `f"{g.input.parameters.value:$}" == "{{input.parameters.value}}"`: the `$` format string tells `hera4` to insert the braces around the output as a simple variable.
+* `f"{g.workflow.parameters.config.jsonpath('$.a'):=}" == "{{=jsonpath(workflow.parameters.config, '$.a')}}"`: the `=` format string tells `hera4` to insert the braces around the output and insert and equals sign and output a complex expression.
 * `f"{g.input.parameters.value}" == "input.parameters.value"`: without any extra format strings, the output is the transpiled `expr` expression.
-* `str(g.input.parameters.value) == "input.parameters.value"`: calling `str` on a `hera.expr` expression also triggers the transpilation.
+* `str(g.input.parameters.value) == "input.parameters.value"`: calling `str` on a `hera4.expr` expression also triggers the transpilation.
 
 
 ## Supported Literals
@@ -28,7 +28,7 @@ The transpiler supports constant literals via the class `C`:
 * **booleans** - `true` and `false` can be represented as `C(True)` and `C(False)`
 * **nil** - `nil` can be represented as `C(None)`
 
-Note: `hera` is smart enough to transpile python constants used in conjunction with a literal directly to a literal. This helps with brevity. For eg: `C(1) + C(2)` is the same as writing `C(1) + 2`. This however only works if the left operand is a literal or an identifier. If in doubt, always define literals via `C(...)`
+Note: `hera4` is smart enough to transpile python constants used in conjunction with a literal directly to a literal. This helps with brevity. For eg: `C(1) + C(2)` is the same as writing `C(1) + 2`. This however only works if the left operand is a literal or an identifier. If in doubt, always define literals via `C(...)`
 
 ### Reference
 
@@ -54,7 +54,7 @@ Struct fields can be accessed by using the `.`  syntax.
 
 * `g.var.attribute` transpiles to `var.attribute`
 
-There maybe times that you want to get a struct field whose name conflicts with a `hera.expr` transpiler function. In this case you can use the `get` method.
+There maybe times that you want to get a struct field whose name conflicts with a `hera4.expr` transpiler function. In this case you can use the `get` method.
 
 * `g.get("var").get("attribute")` transpiles to `var.attribute`
 
@@ -294,7 +294,7 @@ transpiles to
 one(Participants, {#.Winner})
 ```
 
-Note: `expr` allows you to omit `#` when accessing attributes in the predicate. In order to ensure consistency, `hera` always includes `#` in the output closure, even though it can be omitted.
+Note: `expr` allows you to omit `#` when accessing attributes in the predicate. In order to ensure consistency, `hera4` always includes `#` in the output closure, even though it can be omitted.
 
 
 ### Reference

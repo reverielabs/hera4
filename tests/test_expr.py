@@ -1,7 +1,7 @@
 import pytest
 from jsonpath_ng import Fields, Slice
 
-from hera.expr import C, P, g, it, sprig
+from hera4.expr import C, P, g, it, sprig
 
 
 @pytest.mark.parametrize(

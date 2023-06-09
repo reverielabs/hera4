@@ -1,14 +1,14 @@
 import pytest
 
-from hera import WorkflowStatus
+from hera4 import WorkflowStatus
 
 
 def test_workflow_status_instantiates_as_expected():
     argo_status = "Running"
-    hera_status = WorkflowStatus.from_argo_status(argo_status)
+    hera4_status = WorkflowStatus.from_argo_status(argo_status)
 
-    assert isinstance(hera_status, WorkflowStatus)
-    assert hera_status == WorkflowStatus.Running
+    assert isinstance(hera4_status, WorkflowStatus)
+    assert hera4_status == WorkflowStatus.Running
 
 
 def test_workflow_status_raises_key_error_on_unrecognized_status():

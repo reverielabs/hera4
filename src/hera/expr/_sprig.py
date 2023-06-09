@@ -8,7 +8,7 @@ Available publicly via the `sprig.<function>` variable.
 
 from typing import Any
 
-from hera.expr._node import Callable
+from hera4.expr._node import Callable
 
 
 class _Method:

@@ -2,7 +2,7 @@ from typing import Optional
 
 from argo_workflows.models import Probe as ArgoProbe
 
-from hera.action import ExecAction, GRPCAction, HTTPGetAction, TCPSocketAction
+from hera4.action import ExecAction, GRPCAction, HTTPGetAction, TCPSocketAction
 
 
 class Probe:

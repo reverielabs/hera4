@@ -1,7 +1,7 @@
 """
 This example showcases how to generate and parallelize generated sequences
 """
-from hera import Sequence, Task, Workflow
+from hera4 import Sequence, Task, Workflow
 
 
 def gen_num():
@@ -12,7 +12,7 @@ def say(message: str):
     print(message)
 
 
-# assumes you used `hera.set_global_token` and `hera.set_global_host` so that the workflow can be submitted
+# assumes you used `hera4.set_global_token` and `hera4.set_global_host` so that the workflow can be submitted
 with Workflow("with-sequence-example") as w:
     t1 = Task("gen-num", gen_num)
     t2 = Task("count", say, with_sequence=Sequence(count=t1.get_result(), start=0))

@@ -1,4 +1,4 @@
-from hera import __version__, __version_info__
+from hera4 import __version__, __version_info__
 
 
 def test_version():

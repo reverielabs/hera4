@@ -1,6 +1,6 @@
 import pytest
 
-from hera.volumes import AccessMode, EmptyDirVolume, Volume, _BaseVolume
+from hera4.volumes import AccessMode, EmptyDirVolume, Volume, _BaseVolume
 
 
 class TestAccessMode:

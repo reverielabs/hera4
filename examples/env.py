@@ -2,7 +2,7 @@
 This example showcases how Hera can dynamically set environmental variables
 """
 
-from hera import ConfigMapEnvFrom, Env, Parameter, Task, Workflow
+from hera4 import ConfigMapEnvFrom, Env, Parameter, Task, Workflow
 
 
 def inspect_envs():
@@ -11,7 +11,7 @@ def inspect_envs():
     print(os.environ)
 
 
-# assumes you used `hera.set_global_token` and `hera.set_global_host` so that the workflow can be submitted
+# assumes you used `hera4.set_global_token` and `hera4.set_global_host` so that the workflow can be submitted
 with Workflow("test-env-variables", parameters=[Parameter("env-value", "wf-env-value")]) as wf:
     Task(
         "test-env",

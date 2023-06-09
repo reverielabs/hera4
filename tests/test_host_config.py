@@ -1,6 +1,6 @@
 import pytest
 
-from hera import (
+from hera4 import (
     Client,
     Config,
     get_global_api_version,

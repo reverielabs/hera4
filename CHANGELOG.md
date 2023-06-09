@@ -61,7 +61,7 @@ The general format is:
 ### Added
 
 - `to_yaml`, `to_dict`, and `to_json` on workflows
-- optional PyYAML dependency (`hera-workflows[yaml]`)
+- optional PyYAML dependency (`hera4-workflows[yaml]`)
 - global default service account
 - global task image
 - global SSL verification flag
@@ -158,7 +158,7 @@ The general format is:
 
 - support for Git artifact authentication credentials
 - tolerations can now be set via workflow
-- version via `hera.__version__`
+- version via `hera4.__version__`
 - volume specifications on workflows
 
 ### Changed
@@ -514,9 +514,9 @@ The general format is:
 
 ### Changed
 
-- `setup.py` packages field to include hera exclusively post-removal of the underlying `v1` directory. With the removal
+- `setup.py` packages field to include hera4 exclusively post-removal of the underlying `v1` directory. With the removal
   of the underlying versioned subpackage (`v1`) in 1.0.0 the `setup.py` file no longer installed the necessary modules
-  as the wheel only included references for whatever subpackages were in `hera.*` but not `hera`
+  as the wheel only included references for whatever subpackages were in `hera4.*` but not `hera4`
   itself (as a module)
 
 # 1.0.0 - DATE (10/01/2022)
@@ -527,8 +527,8 @@ The general format is:
 
 ### Changed
 
-- location of all files from `v1` up one folder to `hera`. Now everything will take the import form
-  of `from hera.module import Object` rather than `from hera.v1.module import Object`
+- location of all files from `v1` up one folder to `hera4`. Now everything will take the import form
+  of `from hera4.module import Object` rather than `from hera4.v1.module import Object`
 - interface of services to take a full host rather than a single domain and put in effort to compute the final host.
   This will offer more freedom to users to select their own host scheme, for example. A flag for SSL verification was
   also introduced
@@ -547,8 +547,8 @@ The general format is:
 ### Changed
 
 - underlying SDK of Hera, which moved from `argo-workflows` to the Argo Workflows repository (unpublished on PyPi)
-  Python SDK. This was originally released in https://github.com/argoproj-labs/hera-workflows/pull/38 but the
-  publication process to PyPi failed. A fix was attempted in https://github.com/argoproj-labs/hera-workflows/pull/43
+  Python SDK. This was originally released in https://github.com/argoproj-labs/hera4-workflows/pull/38 but the
+  publication process to PyPi failed. A fix was attempted in https://github.com/argoproj-labs/hera4-workflows/pull/43
   but that published a broken version because the `dependency_links` of `setup.py` did not actually install the
   necessary dependency. As a consequence, the release was quickly deleted from PyPi because it was broken. The best
   course of action was to wait for the official release of the new SDK under `argo-workflows==6.0.0`, in collaboration

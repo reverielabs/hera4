@@ -6,7 +6,7 @@ The daemoned task operates as server, serving an example payload, with the secon
 http requests to the server.
 
 ```python
-from hera import Env, Task, Workflow
+from hera4 import Env, Task, Workflow
 
 
 def server():
@@ -35,7 +35,7 @@ def consumer():
     print(response.read())
 
 
-# assumes you used `hera.set_global_token` and `hera.set_global_host` so that the workflow can be submitted
+# assumes you used `hera4.set_global_token` and `hera4.set_global_host` so that the workflow can be submitted
 with Workflow("variables") as w:
     d = Task("daemon", server, daemon=True)
     t = Task("consumer", consumer, env=[Env(name="SERVER_IP", value_from_input=d.ip)])

@@ -8,14 +8,14 @@ the `Task` via the global parameter `w.get_parameter('msg')`, which sets the `'{
 task parameter definition.
 
 ```python
-from hera import Parameter, Task, Workflow
+from hera4 import Parameter, Task, Workflow
 
 
 def say(msg: str):
     print(msg)
 
 
-with Workflow("hera-gitops-say", parameters=[Parameter('msg')]) as w:
+with Workflow("hera4-gitops-say", parameters=[Parameter('msg')]) as w:
     Task("t", say, inputs=[w.get_parameter('msg')])
 
 with open('hello.yaml', 'w') as f:

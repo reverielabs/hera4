@@ -3,7 +3,7 @@
 This example showcases conditional execution on success, failure, and error
 
 ```python
-from hera import Task, Workflow
+from hera4 import Task, Workflow
 
 
 def random():

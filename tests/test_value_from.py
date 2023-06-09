@@ -4,7 +4,7 @@ from argo_workflows.models import (
     IoArgoprojWorkflowV1alpha1ValueFrom,
 )
 
-from hera.value_from import ConfigMapKeyRef, ValueFrom
+from hera4.value_from import ConfigMapKeyRef, ValueFrom
 
 
 class TestValueFrom:

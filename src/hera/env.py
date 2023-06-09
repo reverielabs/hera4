@@ -13,7 +13,7 @@ from argo_workflows.models import (
     SecretKeySelector,
 )
 
-from hera.parameter import Parameter
+from hera4.parameter import Parameter
 
 
 @dataclass

@@ -1,6 +1,6 @@
 import os
 
-from hera import Config
+from hera4 import Config
 
 
 def test_config_contains_env_host():

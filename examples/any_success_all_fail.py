@@ -1,4 +1,4 @@
-from hera import Task, Workflow
+from hera4 import Task, Workflow
 
 
 def foo(a):
@@ -17,7 +17,7 @@ def fail(a):
     raise Exception(a)
 
 
-# assumes you used `hera.set_global_token` and `hera.set_global_host` so that the workflow can be submitted
+# assumes you used `hera4.set_global_token` and `hera4.set_global_host` so that the workflow can be submitted
 with Workflow("any-success-all-fail") as w:
     t1 = Task("t1", random_fail, [1, 2, 3])
     t2 = Task("t2", fail, [1, 2, 3])

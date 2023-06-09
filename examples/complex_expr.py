@@ -6,8 +6,8 @@ https://github.com/argoproj/argo-workflows/blob/master/examples/expression-reusi
 import base64
 import json
 
-from hera import Env, Parameter, Task, Workflow
-from hera.expr import C, g, it, sprig
+from hera4 import Env, Parameter, Task, Workflow
+from hera4.expr import C, g, it, sprig
 
 
 def base64_encode(input: str) -> str:

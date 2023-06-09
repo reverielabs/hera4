@@ -7,7 +7,7 @@ from argo_workflows.models import (
     ObjectMeta,
 )
 
-from hera import ConcurrencyPolicy, CronWorkflow
+from hera4 import ConcurrencyPolicy, CronWorkflow
 
 
 class TestConcurrencyPolicy:

@@ -12,7 +12,7 @@ from argo_workflows.models import PodAntiAffinity as ArgoPodAntiAffinity
 from argo_workflows.models import PreferredSchedulingTerm as ArgoPreferredSchedulingTerm
 from argo_workflows.models import WeightedPodAffinityTerm as ArgoWeightedPodAffinityTerm
 
-from hera import (
+from hera4 import (
     Affinity,
     Expression,
     Field,

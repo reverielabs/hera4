@@ -8,7 +8,7 @@ from argo_workflows.models import (
     IoArgoprojWorkflowV1alpha1Prometheus,
 )
 
-from hera.metric import Counter, Gauge, Histogram, Label, Metric, Metrics
+from hera4.metric import Counter, Gauge, Histogram, Label, Metric, Metrics
 
 
 class TestCounter:

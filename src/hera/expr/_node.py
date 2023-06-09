@@ -1,4 +1,4 @@
-"""Internal hera module to help transpile Python to expr.
+"""Internal hera4 module to help transpile Python to expr.
 
 This module primarily defines user-facing Constant class (aliased as `C` in the public module),
 a Parentheses class to parenthesize expressions (aliased as `P` in the public module) and the Identifier

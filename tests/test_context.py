@@ -1,6 +1,6 @@
-from hera._context import _DAG_context
-from hera.dag import DAG
-from hera.task import Task
+from hera4._context import _DAG_context
+from hera4.dag import DAG
+from hera4.task import Task
 
 
 class TestDAGContext:

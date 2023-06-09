@@ -1,4 +1,4 @@
-# Hera (hera-workflows)
+# Hera (hera4-workflows)
 
 ```text
 The Argo was constructed by the shipwright Argus,
@@ -7,20 +7,20 @@ and its crew were specially protected by the goddess Hera.
 (https://en.wikipedia.org/wiki/Argo)
 
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/argoproj-labs/hera-workflows)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/argoproj-labs/hera4-workflows)
 
-[![Build](https://github.com/argoproj-labs/hera-workflows/actions/workflows/cicd.yaml/badge.svg)](https://github.com/argoproj-labs/hera-workflows/blob/main/.github/workflows/cicd.yaml)
-[![Docs](https://readthedocs.org/projects/hera-workflows/badge/?version=latest)](https://hera-workflows.readthedocs.io/en/latest/?badge=latest)
-[![codecov](https://codecov.io/gh/argoproj-labs/hera-workflows/branch/main/graph/badge.svg?token=x4tvsQRKXP)](https://codecov.io/gh/argoproj-labs/hera-workflows)
+[![Build](https://github.com/argoproj-labs/hera4-workflows/actions/workflows/cicd.yaml/badge.svg)](https://github.com/argoproj-labs/hera4-workflows/blob/main/.github/workflows/cicd.yaml)
+[![Docs](https://readthedocs.org/projects/hera4-workflows/badge/?version=latest)](https://hera4-workflows.readthedocs.io/en/latest/?badge=latest)
+[![codecov](https://codecov.io/gh/argoproj-labs/hera4-workflows/branch/main/graph/badge.svg?token=x4tvsQRKXP)](https://codecov.io/gh/argoproj-labs/hera4-workflows)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[![Pypi](https://img.shields.io/pypi/v/hera-workflows.svg)](https://pypi.python.org/pypi/hera-workflows)
-[![CondaForge](https://anaconda.org/conda-forge/hera-workflows/badges/version.svg)](https://anaconda.org/conda-forge/hera-workflows)
-[![Versions](https://img.shields.io/pypi/pyversions/hera-workflows.svg)](https://github.com/argoproj-labs/hera-workflows)
+[![Pypi](https://img.shields.io/pypi/v/hera4-workflows.svg)](https://pypi.python.org/pypi/hera4-workflows)
+[![CondaForge](https://anaconda.org/conda-forge/hera4-workflows/badges/version.svg)](https://anaconda.org/conda-forge/hera4-workflows)
+[![Versions](https://img.shields.io/pypi/pyversions/hera4-workflows.svg)](https://github.com/argoproj-labs/hera4-workflows)
 
-[![Downloads](https://pepy.tech/badge/hera-workflows)](https://pepy.tech/project/hera-workflows)
-[![Downloads/month](https://pepy.tech/badge/hera-workflows/month)](https://pepy.tech/project/hera-workflows)
-[![Downloads/week](https://pepy.tech/badge/hera-workflows/week)](https://pepy.tech/project/hera-workflows)
+[![Downloads](https://pepy.tech/badge/hera4-workflows)](https://pepy.tech/project/hera4-workflows)
+[![Downloads/month](https://pepy.tech/badge/hera4-workflows/month)](https://pepy.tech/project/hera4-workflows)
+[![Downloads/week](https://pepy.tech/badge/hera4-workflows/week)](https://pepy.tech/project/hera4-workflows)
 
 
 Hera is a Python framework for constructing and submitting Argo Workflows. The main goal of Hera is to make the Argo
@@ -52,20 +52,20 @@ command for port forward!
 > **Note**
 > Since the deprecation of tokens being automatically created for ServiceAccounts and Argo using Bearer tokens in place,
 > it is necessary to use `--auth=server` and/or `--auth=client` when setting up Argo Workflows on Kubernetes v1.24+ 
-> in order for hera-workflows to communicate to the Argo Server.
+> in order for hera4-workflows to communicate to the Argo Server.
 
 # Installation
 
 | Source                                                         | Command                                                                                                        |
 |----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| [PyPi](https://pypi.org/project/hera-workflows/)               | `pip install hera-workflows`                                                                                   |
-| [Conda](https://anaconda.org/conda-forge/hera-workflows)       | `conda install -c conda-forge hera-workflows`                                                                  |
-| [GitHub repo](https://github.com/argoproj-labs/hera-workflows) | `python -m pip install git+https://github.com/argoproj-labs/hera-workflows --ignore-installed`/`pip install .` |
+| [PyPi](https://pypi.org/project/hera4-workflows/)               | `pip install hera4-workflows`                                                                                   |
+| [Conda](https://anaconda.org/conda-forge/hera4-workflows)       | `conda install -c conda-forge hera4-workflows`                                                                  |
+| [GitHub repo](https://github.com/argoproj-labs/hera4-workflows) | `python -m pip install git+https://github.com/argoproj-labs/hera4-workflows --ignore-installed`/`pip install .` |
 
 # Examples
 
 ```python
-from hera import Task, Workflow
+from hera4 import Task, Workflow
 
 
 def say(message: str):
@@ -83,7 +83,7 @@ with Workflow("diamond") as w:
 w.create()
 ```
 
-See the [examples](https://github.com/argoproj-labs/hera-workflows/tree/main/examples) directory for a collection of
+See the [examples](https://github.com/argoproj-labs/hera4-workflows/tree/main/examples) directory for a collection of
 Argo workflow construction and submission via Hera!
 
 # Contributing
@@ -118,7 +118,7 @@ As `coverage` *depends* on `py37`, it will run *after* `py37`
 
 See project `tox.ini` for more details
 
-Also, see the [contributing guide](https://github.com/argoproj-labs/hera-workflows/blob/main/CONTRIBUTING.md)!
+Also, see the [contributing guide](https://github.com/argoproj-labs/hera4-workflows/blob/main/CONTRIBUTING.md)!
 
 # Comparison
 
@@ -130,9 +130,9 @@ There are other libraries currently available for structuring and submitting Arg
   worfklows using Python.
 
 While the aforementioned libraries provide amazing functionality for Argo workflow construction and submission, they
-require an advanced understanding of Argo concepts. When [Dyno Therapeutics](https://dynotx.com) started using Argo
+require an advanced understanding of Argo concepts. When [Dyno Thera4peutics](https://dynotx.com) started using Argo
 Workflows, it was challenging to construct and submit experimental machine learning workflows. Scientists and engineers
-at [Dyno Therapeutics](https://dynotx.com) used a lot of time for workflow definition rather than the implementation of
+at [Dyno Thera4peutics](https://dynotx.com) used a lot of time for workflow definition rather than the implementation of
 the atomic unit of execution - the Python function - that performed, for instance, model training.
 
 Hera presents a much simpler interface for task and workflow construction, empowering users to focus on their own
@@ -145,7 +145,7 @@ executable payloads rather than workflow setup. Here's a side by side comparison
 <td valign="top"><p>
 
 ```python
-from hera import Task, Workflow
+from hera4 import Task, Workflow
 
 
 def say(message: str):

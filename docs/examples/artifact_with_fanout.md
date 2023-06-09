@@ -3,7 +3,7 @@
 
 
 ```python
-from hera import Artifact, Task, Workflow
+from hera4 import Artifact, Task, Workflow
 
 
 def writer():
@@ -29,7 +29,7 @@ def consumer(i: int):
     print(i)
 
 
-# assumes you used `hera.set_global_token` and `hera.set_global_host` so that the workflow can be submitted
+# assumes you used `hera4.set_global_token` and `hera4.set_global_host` so that the workflow can be submitted
 with Workflow("artifact-with-fanout") as w:
     w_t = Task("writer", writer, outputs=[Artifact("test", "/file")])
     f_t = Task(

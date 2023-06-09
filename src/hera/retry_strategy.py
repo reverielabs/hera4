@@ -3,8 +3,8 @@ from typing import Optional, Union
 
 from argo_workflows.models import IoArgoprojWorkflowV1alpha1RetryStrategy
 
-from hera.backoff import Backoff
-from hera.retry_policy import RetryPolicy
+from hera4.backoff import Backoff
+from hera4.retry_policy import RetryPolicy
 
 
 @dataclass
@@ -14,7 +14,7 @@ class RetryStrategy:
     Attributes
     ----------
     backoff: Optional[Backoff] = None
-        Backoff strategy. See `hera.backoff.Backoff` or https://argoproj.github.io/argo-workflows/fields/#backoff.
+        Backoff strategy. See `hera4.backoff.Backoff` or https://argoproj.github.io/argo-workflows/fields/#backoff.
     expression: Optional[str] = None
         Expression is a condition expression for when a node will be retried.
         If it evaluates to false, the node will not be retried and the retry strategy will be ignored

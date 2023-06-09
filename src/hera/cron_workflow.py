@@ -8,8 +8,8 @@ from argo_workflows.models import (
     IoArgoprojWorkflowV1alpha1CronWorkflowSpec,
 )
 
-from hera.global_config import GlobalConfig
-from hera.workflow import Workflow
+from hera4.global_config import GlobalConfig
+from hera4.workflow import Workflow
 
 
 class ConcurrencyPolicy(str, Enum):
@@ -55,13 +55,13 @@ class CronWorkflow(Workflow):
         Schedule at which the Workflow will be run in Cron format e.g. 5 4 * * *.
     concurrency_policy: Optional[ConcurrencyPolicy] = None
         Concurrency policy that dictates the concurrency behavior of multiple cron jobs of the same kind.
-        See `hera.cron_workflow.ConcurrencyPolicy`
+        See `hera4.cron_workflow.ConcurrencyPolicy`
     starting_deadline_seconds: Optional[int] = None
         The number of seconds the workflow has as a starting deadline.
     timezone: Optional[str] = None
         Timezone during which the Workflow will be run from the IANA timezone standard, e.g. America/Los_Angeles.
     **kwargs
-        Any kwargs to set on the workflow. See `hera.workflow.Workflow`.
+        Any kwargs to set on the workflow. See `hera4.workflow.Workflow`.
     """
 
     def __init__(
